@@ -2,8 +2,8 @@
 2- fare la chiamata api e salvare i film
 3- realizzare search component
 4- filtrare la ricerca tramite una altra chiamata api
-5-realizzare un cardcomponent, in cui inserire i dati dei film
-5- mostrare i film filtrati nel main
+5- realizzare un cardcomponent, in cui inserire i dati dei film
+6- mostrare i film filtrati nel main
 
 1- realizzare um main con delle sezioni
 2- mostrare i film con le relative sezioni
