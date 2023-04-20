@@ -13,9 +13,14 @@
 </template>
 
 <script>
+
     export default {
         name: 'SearchComponent',
-
+        data(){
+            return{
+                
+            }
+        }
     }
 </script>
 
