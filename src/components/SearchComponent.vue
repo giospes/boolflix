@@ -6,19 +6,20 @@
             <li class="text-uppercase fs-5 px-3"><a href="">TV Shows</a></li>
         </ul>
         <div id="search-container" class="ms-4">
-            <input type="text">
+            <input v-model="store.query" @keyup="store.searchMovies" type="text">
             <button>Search</button>
         </div>
     </nav>
 </template>
 
 <script>
+    import {store} from '../data/store';
 
     export default {
         name: 'SearchComponent',
         data(){
             return{
-                
+               store 
             }
         }
     }

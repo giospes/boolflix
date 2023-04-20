@@ -1,11 +1,11 @@
 <template>
-  <!-- <HeaderComponent></HeaderComponent>
-  <MainComponent></MainComponent> -->
-  <h1>{{url}}</h1>
+  <HeaderComponent></HeaderComponent>
+  <MainComponent></MainComponent> 
+  
 </template>
 
 <script>
-  import store from './store';
+  import {store} from './data/store';
   import axios from 'axios';
   import HeaderComponent from './components/HeaderComponent.vue';
   import MainComponent from './components/MainComponent.vue';
@@ -20,16 +20,14 @@
     },
     data(){
       return{
-        
+        store
       }
     }, 
     computed:{
-      url(){
-        return store.state.baseUrl
-      }
+      
     },
     mounted(){
-      store.commit('searchMovs')
+      
     }
   }
 </script>
