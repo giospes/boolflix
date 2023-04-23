@@ -1,16 +1,16 @@
 <template>
     <section class="d-flex gap-4">
-        <CardComponent v-for="movie in store.moviesFound" :movie="movie"></CardComponent>
+        <TvCardComponent v-for="tv in store.TvFound" :tv="tv"></TvCardComponent>
     </section>
 </template>
 
 <script>
     import {store} from '../data/store';
-    import CardComponent from './CardComponent.vue';
+    import TvCardComponent from './TvCardComponent.vue';
     export default {
-        name: 'CardSection',
+        name: 'TvSection',
         components: {
-            CardComponent
+            TvCardComponent
         },
         data(){
             return{

@@ -6,7 +6,7 @@
             <li class="text-uppercase fs-5 px-3"><a href="">TV Shows</a></li>
         </ul>
         <div id="search-container" class="ms-4">
-            <input v-model="store.query" @keyup="store.searchMovies" type="text">
+            <input v-model="store.query" @keyup="store.searchMovies(), store.searchTv()" type="text">
             <button>Search</button>
         </div>
     </nav>

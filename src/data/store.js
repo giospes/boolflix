@@ -30,9 +30,19 @@ export const store = reactive({
                 }
             )
             
-        },
-        deleteUrl(){
-
+        },searchTv(){
+            const url = this.baseUrl + this.endpoint.searchTv
+            axios.get(url, {params:{ api_key: this.apikey, query: this.query}}).then(
+                (res)=>{
+                    this.TvFound = res.data.results
+                    this.loaded= true
+                } ,
+                (error)=> {
+                    this.errorMess = error.message
+                    
+                }
+            )
+            
         }
     
         

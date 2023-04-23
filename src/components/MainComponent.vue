@@ -1,18 +1,20 @@
 <template>
     <main>
         <SearchComponent></SearchComponent>
-        <CardSection></CardSection>
+        <MoviesSection></MoviesSection>
+        <TvSection></TvSection>
     </main>
 </template>
 
 <script>
     import {store} from '../data/store';
-    import CardSection from './CardSection.vue';
+    import MoviesSection from './MoviesSection.vue';
+    import TvSection from './TvSection.vue';
     import SearchComponent from './SearchComponent.vue';
     export default {
         name: 'MainComponent',
         components:{
-            SearchComponent, CardSection
+            SearchComponent, MoviesSection, TvSection
         },
         data(){
             return{
