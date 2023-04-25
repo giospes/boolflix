@@ -3,12 +3,12 @@
         <div class="front">
             <img :src="imgMov" class="w-100 h-100 object-fit-cover">
         </div>
-        <div class="back">
-            <span>title: <h6 class="d-inline-block">{{ movie.title }}</h6></span>
-            <span>Original Title: <h6 class="d-inline-block"> {{ movie.original_title }}</h6></span>
-            <span>Language: <img :src="imgLangSource" class="lang" alt="">  {{ movie.original_language }}</span>
-            <span class="d-block">Rating: <fa :icon="['fas', 'star']" v-for="i in ratingConverted" /></span>
-        </div>
+        <ul class="back">
+            <li>title: <h6 class="d-inline-block">{{ movie.title }}</h6></li>
+            <li>Original Title: <h6 class="d-inline-block"> {{ movie.original_title }}</h6></li>
+            <li>Language: <img :src="imgLangSource" class="lang" alt="">  {{ movie.original_language }}</li>
+            <li class="d-block">Rating: <fa :icon="['fas', 'star']" v-for="i in ratingConverted" /></li>
+        </ul>
     </div>
 </template>
 
@@ -47,9 +47,11 @@
 </script>
 
 <style lang="scss" scoped>
-    .gs-card{
+ .gs-card{
         width: 200px;
         height: 250px;
+        background-color: black;
+        color: white;
         overflow: hidden;
         .lang{
             width: 22px;
@@ -67,6 +69,9 @@
             display: none;
         }
         .back{
+            padding-top: 1rem;
+            padding-right: .5rem;
+            overflow: auto;
             display: block;
         }
     }

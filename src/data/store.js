@@ -16,34 +16,34 @@ export const store = reactive({
         moviesFound: [],
         TvFound: [],
         errorMess: '',
-        loaded: false,
+        loaded: 0,
         searchMovies(){
+            this.loaded = 1;
             const url = this.baseUrl + this.endpoint.searchMovies
             axios.get(url, {params:{ api_key: this.apikey, query: this.query}}).then(
                 (res)=>{
                     this.moviesFound = res.data.results
-                    this.loaded= true
-                   
-                } ,
+                    this.loaded= 2 
+                },
                 (error)=> {
-                    this.errorMess = error.message
-                    
+                    this.errorMess = error.message 
                 }
             )
+            this.loaded= 0
             
         },searchTv(){
+            this.loaded = 1;
             const url = this.baseUrl + this.endpoint.searchTv
             axios.get(url, {params:{ api_key: this.apikey, query: this.query}}).then(
                 (res)=>{
                     this.TvFound = res.data.results
-                    this.loaded= true
-                } ,
+                    this.loaded= 2
+                },
                 (error)=> {
                     this.errorMess = error.message
-                    
                 }
             )
-            
+            this.loaded= 0
         }
         
     
